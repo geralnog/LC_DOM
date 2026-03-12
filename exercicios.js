@@ -42,8 +42,7 @@ um seja assignada uma das cores do array.
 }
 } */
 
-
-let paragraph = document.createElement("p");
+/* let paragraph = document.createElement("p");
 function createBtns() {
   const headings = document.querySelector("div");
 
@@ -59,3 +58,45 @@ function createBtns() {
   paragraph.innerText = randomColor;
   headings.appendChild(paragraph);
 }
+
+let helloBtn = document.getElementById("helloBtn");
+let loginBtn = document.getElementById("loginBtn");
+let divEvent = document.getElementById("divEvent");
+
+function helloW() {
+  alert("hello mundo!");
+}
+
+function login() {
+  let pass = prompt("qual é a pass?");
+}
+
+function changeToGreen() {
+  this.style.backgroundColor = "green";
+}
+
+helloBtn.addEventListener("click", helloW);
+
+loginBtn.addEventListener("click", login, { once: true });
+loginBtn.addEventListener("click", helloW);
+divEvent.addEventListener("click", helloW);
+
+divEvent.addEventListener("click", changeToGreen);
+loginBtn.addEventListener("click", changeToGreen);
+helloBtn.addEventListener("click", changeToGreen); */
+
+/* document.addEventListener("keydown", function () {
+  alert("evento de teclado!");
+});
+ document.addEventListener("keydown", function (event) {
+  console.log(event);
+  alert("evento de teclado!");
+}); */
+
+/* document.addEventListener("keydown", function (event) {
+  console.log(event.key);
+  if (event.key == "l" || event.key == "L") {
+    alert("evento de teclado!" + event.key);
+  }
+}); */
+
