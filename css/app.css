@@ -38,14 +38,19 @@ img.square {
 
 
 .highlight {
-    background-color: yellow;
+    background-color: blueviolet;
 }
 
-
+.NO_highlight
+{
+    background-color: transparent;
+}
 .myPhotoImg {
     width: 55px;
     height: 55px;
 }
+
+
 
 
 .classListTest {

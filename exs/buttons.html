@@ -1,19 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>100 Buttons!</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 Buttons!</title>
+  </head>
+  <script src="/LC_DOM/exercicios.js" defer></script>
 
+  <body>
     <h1>Look At All My Buttons!</h1>
     <div id="container">
-        
-        <button onclick="createBtns()">Create 100Btns</button>
-    
+      <button onclick="createBtns()">Create 100Btns</button>
     </div>
->
-</body>
 
+    <p>Calculadora</p>
+  <input type="text" id="num1" placeholder="Número 1"  /> 
+  <select id="operation">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>    
+  <input type="text" id="num2" placeholder="Número 2" />
+  <p>Resultado: </p>
+  </body>
 </html>
