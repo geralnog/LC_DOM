@@ -15,7 +15,7 @@
 
 // ---------''-----
 
-let yammi_text = document.querySelector("span");
+/* let yammi_text = document.querySelector("span");
 
 function changeTaste() {
   if (yammi_text.innerText == "Yammi") {
@@ -89,7 +89,7 @@ function mudaImagem() {
     );
   }
 }
-
+ */
 // 2ª Versão
 
 /* function eggOrChicken() {
@@ -135,14 +135,13 @@ function mudaImagem() {
   }
 } */
 
-  
-let myLoginElement = document.createElement("h3");
+/* let myLoginElement = document.createElement("h3");
 myLoginElement.innerText = "olá Sara, login efectuado!";
 
 //indicar quem é o pai (onde o novo elemento vai encaixar)
 let myLoginParent = document.getElementById("login-message");
 myLoginParent.appendChild(myLoginElement);
-
+ */
 /* //resultado de uma consulta à base de dados que deu login ok
 function login() {
   //criar o novo elemento
@@ -157,3 +156,62 @@ function login() {
   myLoginParent.previousElementSibling.remove();
 }
  */
+
+let helloBtn = document.getElementById("helloBtn");
+let loginBtn = document.getElementById("loginBtn");
+let divEvent = document.getElementById("divEvent");
+let myList = document.getElementById("list");
+let myForm = document.getElementById("form");
+
+function helloW() {
+  alert("hello mundo!");
+}
+
+function login() {
+  let pass = prompt("qual é a pass?");
+}
+
+function changeToGreen() {
+  this.style.backgroundColor = "green";
+}
+
+helloBtn.addEventListener("mouseout", helloW);
+loginBtn.addEventListener("click", login, { once: true });
+loginBtn.addEventListener("click", helloW);
+divEvent.addEventListener("click", changeToGreen);
+loginBtn.addEventListener("click", changeToGreen);
+helloBtn.addEventListener("click", changeToGreen);
+
+document.addEventListener("keydown", function (event) {
+  console.log(event.key);
+  if (event.key == "l" || event.key == "L") {
+    alert("evento de teclado!" + event.key);
+  }
+});
+
+myForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  //traz um objecto com TODOS os inputs do formulário
+  let data = new FormData(this);
+
+  //acede ao input do formulário que tem no name newAnimal
+  let animal = data.get("newAnimal");
+
+  let newLi = document.createElement("li");
+  newLi.innerText = animal;
+
+  myList.appendChild(newLi);
+
+  this.reset();
+});
+
+//loginBtn.addEventListener("click", login);
+//loginBtn.addEventListener("click", helloW);
+
+let logoutBtn = document.getElementById('logout');
+ 
+logoutBtn.addEventListener('click', function(){
+  localStorage.removeItem('user_login')
+})
+ 
+ 
